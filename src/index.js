@@ -8,26 +8,31 @@ import { store } from "./redux/store";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Signin from "./pages/Signin";
+import Home from "./pages/Home";
 
 const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <App />,
-	},
-	{
-		path: "/signin",
-		element: <Signin />,
-	},
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/signin",
+    element: <Signin />,
+  },
+  {
+    path: "/home",
+    element: <Home />,
+  },
 ]);
 
 //On encapsule l'ensemble de nos composants dans Provider qui va distribuer notre stor(state global) à tous nos composants
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-	<Provider store={store}>
-		<React.StrictMode>
-			<RouterProvider router={router} />
-		</React.StrictMode>
-	</Provider>
+  <Provider store={store}>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,11 +1,14 @@
-import rootReducer from './reducers'
-import {createStore} from 'redux'
+//import rootReducer from './reducers'
+import { configureStore } from "@reduxjs/toolkit";
+//import { apiSlice } from "./api/apiSlice";
+//import authReducer from "../features/auth/authSlice";
+//import { useReducer } from "react";
+import userReducer from "./UserSlice";
 
+export const store = configureStore({
+  reducer: {
+    user: userReducer,
+  },
+});
 
-
-
-let store = createStore(rootReducer);
-
-
-export {store}
-
+export default store;

@@ -37,10 +37,6 @@
   }
 }
 
-
-
-
-
 html {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -114,7 +110,7 @@ body {
 }
 
 .hero {
-  background-image: url('./assets/bank-tree.jpeg');
+  background-image: url("./assets/bank-tree.jpeg");
   background-position: 0 -50px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -196,31 +192,66 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.sign-in-button {
-  display: block;
-  width: 100%;
-  padding: 8px;
-  font-size: 1.1rem;
+.signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.signin-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signin-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
   font-weight: bold;
-  margin-top: 1rem;
-  border-color: #00bc77;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.signin-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
   background-color: #00bc77;
   color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.sign-in-content {
-  box-sizing: border-box;
-  background-color: white;
-  width: 300px;
-  margin: 0 auto;
-  margin-top: 3rem;
-  padding: 2rem;
+.signin-button:hover {
+  background-color: #009a5b;
 }
-
-.sign-in-icon {
-  font-size: 5rem;
-}
-
 .input-remember {
   display: flex;
 }
